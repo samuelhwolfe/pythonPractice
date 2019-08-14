@@ -1,0 +1,5 @@
+print('Enter your name')
+myName = input()
+print('Enter your age')
+myAge = input()
+print('Wow, Samuel! Your age is ' + str(int(myAge)) + '! That means you will be 100 in ' + str(int(100) - int(myAge)) + ' years.')
