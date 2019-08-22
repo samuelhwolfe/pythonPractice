@@ -20,7 +20,7 @@
 #area = radius ** 2 * 3.14
 #print('The area of your circle is ' + str(area) + ' inches.')
 
-firstName = input("What is your first name? ")
-lastName = input("What is your last name? ")
-print('Now I shall reverse your name.'
-      + '\n' + lastName + ' ' + firstName)
+#firstName = input("What is your first name? ")
+#lastName = input("What is your last name? ")
+#print('Now I shall reverse your name.'
+#      + '\n' + lastName + ' ' + firstName)
