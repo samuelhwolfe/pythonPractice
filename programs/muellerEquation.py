@@ -28,10 +28,17 @@ def activityLevel(activity):
 
 lbm = int(input('Enter your lean body mass in kg: '))
 fm = int(input('Enter your fat mass in kg: '))
-#sex = input('What is your sex? ' )
-#age = int(input('Enter your age: '));
-#activity = input('What is your activity level:\nSedentary, Lightly active, Moderately active, Very active, or Extra active? ');
+sex = input('What is your sex? ' )
+age = int(input('Enter your age: '));
+activity = input('What is your activity level (choose one):\n'
+                 '- Sedentary\n'
+                 '- Lightly active\n'
+                 '- Moderately active\n'
+                 '- Very active\n'
+                 '- Extra active\n');
 
-mueller = float(leanBodyMass(lbm)) + float(fatMass(fm))
+mueller = int(leanBodyMass(lbm) + fatMass(fm) + sexIdentity(sex) - ageAdjustment(age) + 674)
 
-print(mueller)
+print('Your basic metabolic rate is ' + str(mueller) + ' calories.')
+print('Your maintenance calorie level is ' + str(int(mueller * activityLevel(activity))) + '.')
+
