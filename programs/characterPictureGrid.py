@@ -10,8 +10,12 @@ grid = [['.', '.', '.', '.', '.', '.'],
 
 
 
-for i in range(len(grid[0])):
-    for x in range(len(grid)):
-        print(grid[x][i], end='')
-    print()
+#for x in range(len(grid[0])):
+#    for y in range(len(grid)):
+#        print(grid[y][x], end='')
+#    print()
 
+
+for y in range(len(grid)):
+    print(grid[y], end='')
+  
