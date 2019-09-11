@@ -10,6 +10,7 @@ while True:
     print('\nType some inputs: \n')
     
     name = input()
+    userList = userList + [name]
     
     if name == '':
         for x in userList:
@@ -36,7 +37,7 @@ while True:
                 elif yesOrNo in ['No', 'no']:
                     break
                 
-    userList = userList + [name]
+    
 
 
     
