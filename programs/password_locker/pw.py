@@ -19,3 +19,5 @@ if account in PASSWORDS:
     print('Password for ' + account + ' copied to clipboard.')
 else:
     print('There is no account named ' + account)
+
+print(str(sys.argv))
