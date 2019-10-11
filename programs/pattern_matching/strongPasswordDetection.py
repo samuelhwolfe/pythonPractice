@@ -6,18 +6,35 @@
 import re
 
 def strongPassword(password):
-    passwordRejex = re.compile(r'''(
-        .{8,}        # 8 or more characters
-        \d+
-        [a-z]+
-        
-        )''', re.VERBOSE)
-    strong = passwordRejex.search(password)
-    
-    if strong == None:
-        print('Invalid password')
-    else:
-        print('Password saved: ' + str(strong))
+    strong = 0
+    while True:
+        if (len(password) < 8):
+            strong = -1
+            break
+        elif re.search(r'\s', password):
+            strong = -1
+            print('No spaces allowed.')
+            break
+        elif not re.search("[a-z]", password):
+            strong = -1
+            break
+        elif not re.search("[A-Z]", password):
+            strong = -1
+            break
+        elif not re.search("[0-9]", password):
+            strong = -1
+            break
+        elif not re.search("[!#$%&'()*+,-./:;<=>?@[\]^_`{|}~]", password):
+            strong = -1
+            break
+        else:
+            strong = 0
+            print('Password saved.')
+            break
+    if strong == -1:
+        strongPassword(input('Password invalid. Try again: '))
+
+
 
 strongPassword(input('Please type a password: '))
 
