@@ -6,9 +6,9 @@ import re
 def findNakamoto(name):
 
     nakamotoRegex = re.compile(r'''(
-        ([A-Z]){1}
-        ([a-z])+\s
-        ([Nakamoto]){8}
+        [A-Z]
+        [a-z]*\s
+        Nakamoto
         )''', re.VERBOSE)
 
     while True:
